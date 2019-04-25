@@ -1,0 +1,36 @@
+---
+configs:
+    use: 'medium'
+    small:
+        memory: 2048
+        cores: 2
+    medium:
+        memory: 4096
+        cores: 2
+    large:
+        memory: 8192
+        cores: 4
+    # settings in 'default' are applied to all configurations
+    default:
+        # Proxy URL that will be configured in various places
+        proxy_url: http://ep.threatpulse.net:80
+        # Domains excluded from the proxy, comma separated list
+        proxy_excludes: .internal.net,.dmz.net
+        # Limit DNS resolution to IPV4
+        ipv4only: true
+        # Force search domain in /etc/resolv.conf
+        search_domain: http://www.google.com
+        # Limit DNS resolution to IPV4
+        ipv4only: true
+        # Populates git config
+        user_name: aravindkumarsunkari
+        user_email: aravindkumar.sunkari@gmail.com
+        # Set the number of monitors, defaults to let the provider determine it. Not necessary when using RDP.
+        monitors: 1
+        # Configure display resolution on startup, useful for providers that do not automatically resize. Not necessary when using RDP.
+        resolution: 1440x1024
+        # Optional Timezone, pulled from host machine if not specified
+        # timezone: America/Chicago
+        # Solarized theme selection: 'light', 'dark', 'none' or not specified. Not specifying will
+        # initialize to 'light' but not change it afterwards.
+        theme: dark
